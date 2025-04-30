@@ -3,7 +3,7 @@ export async function callApi(endpoint, params = {}, setMessage, setError, setLo
   setLoading && setLoading(true);
   setError && setError("");
   setMessage && setMessage("");
-  let url = `http://localhost:8000${endpoint}`;
+  let url = `https://movie-dl-be.vercel.app${endpoint}`;
   if (Object.keys(params).length) {
     url += "?" + new URLSearchParams(params).toString();
   }
